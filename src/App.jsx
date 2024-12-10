@@ -1,11 +1,13 @@
-import styles from './App.module.css'
+import styles from './App.module.scss'
+import Homepage from './components/Homepage/Homepage'
+
 
 function App() {
 
   return (
-    <>
-    Hello World!
-    </>
+    <div>
+      <Homepage />    
+    </div>
   )
 }
 
