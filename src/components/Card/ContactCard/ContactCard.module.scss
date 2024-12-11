@@ -1,0 +1,36 @@
+.card {
+    background-color: #7490AA;
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    border-radius: 50px;
+    opacity: 0;
+    pointer-events: none; /* Prevent interaction when hidden */
+    transform: scale(0.9); /* Slightly smaller for a "pop-in" effect */
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.card.visible {
+    opacity: 1; /* Fully visible */
+    pointer-events: auto; /* Allow interaction */
+    transform: scale(1); /* Back to full size */
+    transition-delay: 0.5s;
+}
+
+.headerContainer{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 24px 24px;
+    align-items: center;
+    
+    .header{
+        color: white;
+        font-weight: 300;
+        font-size: 48px;
+    }
+    .closeIcon{
+        width: 36px;
+        height: 36px;
+    }
+}

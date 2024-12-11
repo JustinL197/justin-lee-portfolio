@@ -4,6 +4,9 @@
     flex-direction: column;
     width: 100%;
     color: white;
+    opacity: 1; /* Fully visible by default */
+    transition: opacity 1s ease-in-out;
+    // transition-delay: 0.5s;
 
     .topline{
         margin: 40px auto;
@@ -34,8 +37,15 @@
     }
 
     .description{
-        font-weight: 100;
+        font-weight: 400;
         font-size: 24px;
+        color: #00326A;
     }
 
+}
+
+
+.fadeOut {
+    opacity: 0; /* Fade out */
+    pointer-events: none; /* Disable interactions while fading out */
 }

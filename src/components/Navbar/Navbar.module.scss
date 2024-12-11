@@ -2,6 +2,9 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    transition: opacity 1s ease-in-out;
+    opacity: 1; /* Fully visible by default */
+    // transition-delay: 0.5s;
 
     .container{
         display: flex;
@@ -16,3 +19,9 @@
         color:white    
     }
 }
+
+.fadeOut {
+    opacity: 0; /* Fade out */
+    pointer-events: none; /* Disable interactions while fading out */
+}
+

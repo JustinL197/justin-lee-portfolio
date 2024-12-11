@@ -1,13 +1,13 @@
 import styles from './Navbar.module.scss'
 
-function Navbar(){
+function Navbar({selectCard, fade}){
     return(
-        <div className={styles.navbar}>
+        <div className={`${styles.navbar} ${fade ? styles.fadeOut : ''}`}>
             <div className={styles.container}>
-                <h2 className={styles.item}>about</h2>
-                <h2 className={styles.item}>project</h2>
-                <h2 className={styles.item}>skills</h2>
-                <h2 className={styles.item}>contact</h2>
+                <h2 className={styles.item} onClick={() => selectCard('about')}>about</h2>
+                <h2 className={styles.item} onClick={() => selectCard('project')}>projects</h2>
+                <h2 className={styles.item} onClick={() => selectCard('skills')}>skills</h2>
+                <h2 className={styles.item} onClick={() => selectCard('contact')}>contact</h2>
             </div>
         </div>
     )
